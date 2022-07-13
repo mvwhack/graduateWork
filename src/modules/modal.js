@@ -8,10 +8,9 @@ const modal = () => {
   const modalBackground = document.querySelector('.modal-overlay');
   const modal = document.querySelector('.modal-callback');
   const modalClose = modal.querySelector('.modal-close');
+  const buttonServices = document.querySelector('.button-services');
 
-
-  button.addEventListener('click', (e) => {
-    e.preventDefault();
+  const openModal = () => {
     modalBackground.style.display = 'block';
 
     if (screen.width < 768) {
@@ -28,16 +27,28 @@ const modal = () => {
         }
       });
     }
+  };
+  const closeModal = () => {
+    modal.style.display = 'none';
+    modalBackground.style.display = 'none';
+  };
+
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
+    openModal();
+  });
+
+  buttonServices.addEventListener('click', (e) => {
+    e.preventDefault();
+    openModal();
   });
 
   modalClose.addEventListener('click', () => {
-    modal.style.display = 'none';
-    modalBackground.style.display = 'none';
+    closeModal();
   });
 
   modalBackground.addEventListener('click', () => {
-    modal.style.display = 'none';
-    modalBackground.style.display = 'none';
+    closeModal();
   });
 
 };
