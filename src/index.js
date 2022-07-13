@@ -1,5 +1,5 @@
 import menu from './modules/menu';
-import two from './modules/two';
+import modal from './modules/modal';
 
 menu();
-two();
+modal();
