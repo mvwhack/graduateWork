@@ -21,6 +21,8 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!-- STYLESHEETS :: TEMPLATE -->
 	<link href="css/style.css" rel="stylesheet">
+
+	<script src="./dist/js/main.js"></script>
 </head>
 
 <body>
@@ -94,8 +96,7 @@
 
 		<!-- * * * * * * Top slider * * * * * * -->
 		<div class="top-slider white text-center relative">
-			<div class="item relative"
-				style="background: url(images/slide1.jpg) 50% 50% no-repeat; background-size: cover;">
+			<div class="item relative" style="background: url(images/slide1.jpg) 50% 50% no-repeat; background-size: cover;">
 				<div class="table">
 					<div class="table-cell">
 						<div class="container">
@@ -110,8 +111,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="item relative"
-				style="background: url(images/slide2.jpg) 50% 50% no-repeat; background-size: cover;">
+			<div class="item relative" style="background: url(images/slide2.jpg) 50% 50% no-repeat; background-size: cover;">
 				<div class="table">
 					<div class="table-cell">
 						<div class="container">
@@ -126,8 +126,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="item relative"
-				style="background: url(images/slide3.jpg) 50% 50% no-repeat; background-size: cover;">
+			<div class="item relative" style="background: url(images/slide3.jpg) 50% 50% no-repeat; background-size: cover;">
 				<div class="table">
 					<div class="table-cell">
 						<div class="container">
@@ -163,8 +162,7 @@
 					<div class="row services-carousel">
 						<div class="col-sm-6 col-md-4">
 							<div class="element relative">
-								<a class="absolute fancyboxModal" href="#application"
-									data-application="Аварийный выезд"></a>
+								<a class="absolute fancyboxModal" href="#application" data-application="Аварийный выезд"></a>
 								<div class="img-wrapper">
 									<img src="images/service1.jpg">
 								</div>
@@ -214,8 +212,7 @@
 						</div>
 						<div class="col-sm-6 col-md-4">
 							<div class="element relative">
-								<a class="absolute fancyboxModal" href="#application"
-									data-application="Замена электросчетчика"></a>
+								<a class="absolute fancyboxModal" href="#application" data-application="Замена электросчетчика"></a>
 								<div class="img-wrapper">
 									<img src="images/service4.jpg">
 								</div>
@@ -231,8 +228,7 @@
 						</div>
 						<div class="col-sm-6 col-md-4">
 							<div class="element relative">
-								<a class="absolute fancyboxModal" href="#application"
-									data-application="Установка, замена люстры"></a>
+								<a class="absolute fancyboxModal" href="#application" data-application="Установка, замена люстры"></a>
 								<div class="img-wrapper">
 									<img src="images/service5.jpg">
 								</div>
@@ -248,8 +244,7 @@
 						</div>
 						<div class="col-sm-6 col-md-4">
 							<div class="element relative">
-								<a class="absolute fancyboxModal" href="#application"
-									data-application="Установка светильников"></a>
+								<a class="absolute fancyboxModal" href="#application" data-application="Установка светильников"></a>
 								<div class="img-wrapper">
 									<img src="images/service6.jpg">
 								</div>
@@ -574,15 +569,19 @@
 			<script type="text/javascript">
 				ymaps.ready(function () {
 					var mapexMap = new ymaps.Map('mapexMap', {
-						center: [44.84373337182117, 37.65565927116387], // центр карты
-						zoom: 16, // масштаб
-						controls: ['zoomControl']
-					}),
+							center: [44.84373337182117, 37.65565927116387], // центр карты
+							zoom: 16, // масштаб
+							controls: ['zoomControl']
+						}),
 
 
 						myPlacemark = new ymaps.Placemark(
 							[44.84373337182117, 37.65565927116387], // координаты маркера
-							{ "iconContent": "", "balloonContentBody": "г. Ваш город, Проспект Дзержинского д. 211", "balloonContentHeader": "" }, // контент маркера
+							{
+								"iconContent": "",
+								"balloonContentBody": "г. Ваш город, Проспект Дзержинского д. 211",
+								"balloonContentHeader": ""
+							}, // контент маркера
 							{
 								// Опции.
 								// Необходимо указать данный тип макета.
@@ -681,8 +680,7 @@
 		<div class="rf">
 			<form name="form-application">
 				<div class="form-group">
-					<input type="text" name="service_name" id="applicationInput" class="form-control"
-						readonly="readonly" />
+					<input type="text" name="service_name" id="applicationInput" class="form-control" readonly="readonly" />
 				</div>
 				<div class="form-group">
 					<input name="fio" type="text" class="form-control required" placeholder="Ваше имя *" />
@@ -719,7 +717,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-	
+
 </body>
 
 </html>
