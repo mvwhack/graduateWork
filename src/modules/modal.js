@@ -10,8 +10,6 @@ const modal = () => {
   const modalClose = modal.querySelector('.modal-close');
   const buttonServices = document.querySelector('.button-services');
 
-  console.log(button);
-
   const openModal = () => {
     modalBackground.style.display = 'block';
 
