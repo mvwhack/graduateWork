@@ -4,11 +4,13 @@ import {
 
 const modal = () => {
 
-  const button = document.querySelector('.header');
+  const button = document.querySelector('.header>.callback-btn');
   const modalBackground = document.querySelector('.modal-overlay');
   const modal = document.querySelector('.modal-callback');
   const modalClose = modal.querySelector('.modal-close');
   const buttonServices = document.querySelector('.button-services');
+
+  console.log(button);
 
   const openModal = () => {
     modalBackground.style.display = 'block';
