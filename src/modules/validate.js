@@ -4,21 +4,21 @@ const validate = () => {
   const nameInput = form.querySelectorAll('input[name="fio"]');
   const phoneInput = form.querySelectorAll('input[name="tel"]');
 
-  const valid = (element, reg, testReg) => [
+  const valid = (element, reg) => [
     element.forEach(input => {
       input.addEventListener('input', (e) => {
-        e.target.value = e.target.value.replace(reg, "");
+        e.target.value = e.target.value.replace(reg, "").substr(0, 13);
         if ((e.target.value === '')) {
           e.target.classList.remove('success');
-        } else if (testReg.test(e.target.value)) {
+        } else {
           e.target.classList.add('success');
         }
       });
     })
   ];
 
-  valid(nameInput, /[^а-яА-Я\s]+/, /[а-яА-Я\s]{2,}/gi);
-  valid(phoneInput, /^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$/, /^.{11}$/);
+  valid(nameInput, /[^а-яА-Я\s]+/);
+  valid(phoneInput, /[^\d\+]/g);
 
 };
 
