@@ -14,7 +14,7 @@ const slider = () => {
 
   const nextSlide = (elems, index, strClass) => {
     elems[index].classList.add(strClass);
-    elems[index].style.display = 'block';
+    elems[index].style.display = 'flex';
   };
 
   const prevSlide = (elems, index, strClass) => {
