@@ -28,14 +28,16 @@ const sendForm = () => {
     }).then(res => res.json());
   };
 
+  const delMessage = () => {
+    document.querySelector('.loadMessage').remove();
+  };
 
   const submitForm = () => {
     const formElements = form.querySelectorAll('input[type="text"]');
     const formData = new FormData(form);
     const formBody = {};
 
-    console.log(formElements);
-
+    statusBlock.classList.add('loadMessage');
     statusBlock.textContent = loadText;
     form.append(statusBlock);
     statusBlock.style.color = '#e9bb26';
@@ -62,6 +64,8 @@ const sendForm = () => {
       alert("Данные не валидны!");
       statusBlock.textContent = '';
     }
+
+    setTimeout(delMessage, 3000);
   };
 
   try {
@@ -77,6 +81,7 @@ const sendForm = () => {
   } catch (error) {
     console.log(error.message);
   }
+
 
 };
 

@@ -54,7 +54,9 @@ const modal = () => {
 
   slider.addEventListener('click', (e) => {
     e.preventDefault();
-    openModal();
+    if (e.target.tagName == 'A') {
+      openModal();
+    }
   });
 
 };
